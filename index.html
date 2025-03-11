@@ -90,7 +90,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/Streamlit_bg.png" alt="Python Streamlit" title="Python Streamlit"/>
+                            <img class="img-fluid" src="assets/img/portfolio/Streamlit_BG.png" alt="Python Streamlit" title="Python Streamlit"/>
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -267,7 +267,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
 									<!-- Portfolio Modal - Text-->
-									<h4 class="text-uppercase mb-3">An easy & efficient way to present a data project, live demonstration with interactions.</h2>
+									<h4 class="text-uppercase mb-3">An easy & efficient way to present a data project ⋙ live demonstration & interactions.</h2>
 									<p class="mb-4">
 										Here is a very good example of a <strong>Streamlit</strong> application.<br>
 										I created it for the oral demonstration as part of my <strong>Data Analyst</strong> <a href="https://datascientestproject-vgchartz.streamlit.app/" target="_blank">study project</a>.
@@ -531,7 +531,7 @@
 										<li>User comments</li>
 									</ul>
 									<div class="mb-2">
-										<h5>Global project demo</h5>
+										<h5>Full project Streamlit demo</h5>
 										<a class="btn btn-outline-light btn-social mx-1" href="https://datascientestproject-vgchartz.streamlit.app/" style="background:#2c3e50" target= "_blank"><i class="fa-fw fa-solid fa-globe fa-beat"></i></a>
 										<a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Jaysidi/DataScientestProject" style="background:#2c3e50" target= "_blank"><i class="fab fa-fw fa-github fa-beat fa-lg"></i></a>
 									</div>
@@ -564,8 +564,43 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">As part of the <strong>Data Analyst</strong> training program at <a href="https://datascientest.com/en/data-analyst-course	" target="_blank">Datascientest</a>, part of the courses focus on machine learning, both supervised and unsupervised. The final project in the course gives us the opportunity to apply what we've learned to a real-life case. In my case, the topic was video game sales forecasting, based on qualitative features.
-									The project was based on a <a href="https://www.kaggle.com/datasets/gregorut/videogamesales" target="_blank">dataset</a> from the <a href="https://www.kaggle.com/" target="_blank">kaggle.com</a> website.</p>
+                                    <p class="mb-4">
+										As part of the <strong>Data Analyst</strong> training program at <a href="https://datascientest.com/en/data-analyst-course	" target="_blank">Datascientest</a>, some courses cover both <i>supervised</i> and <i>unsupervised</i> <strong>Machine Learning</strong>.<br>
+										The <a href="https://datascientestproject-vgchartz.streamlit.app/" target="_blank">study project</a> allowed us to apply our knowledge to a real-world case. My project focused on forecasting video game sales based on qualitative features, using a <a href="https://www.kaggle.com/datasets/gregorut/videogamesales" target="_blank">dataset</a> from <a href="https://www.kaggle.com/" target="_blank">Kaggle</a>.
+									</p>
+									<img class="img-fluid rounded mb-3" src="assets/img/portfolio/MachineLearning_1.png" alt="Video games dataset sample" title="Video games dataset sample"/>
+									<p class="text-start mb-0">
+										The qualitative features for predictions are: 
+									</p>
+									<ul class="text-start mb-4">
+										<li>Platform</li>
+										<li>Year</li>
+										<li>Genre</li>
+										<li>Publisher</li>
+									</ul>
+									<p class="text-start mb-2">
+										And the choosen target is <b>Global_Sales</b>.<br><br>
+										⋙ After data exploration and cleaning, and first tests with classic models, we found out that we get better results when the target was processed with the <b>Box-Cox transform</b>. This transformation aims to make data more Gaussian-like.<br><br>
+									</p>
+									<div class="row">
+										<div class="col-lg-6 ms-auto"><p class="mb-0">Quantile to quantile plot<br>Raw data</p><img class="img-fluid rounded mb-5" src="assets/img/portfolio/QQPlot_Raw.png" alt="Raw data - Target data QQ plot" title="Raw data - Target data QQ plot"/></div>
+										<div class="col-lg-6 me-auto"><p class="mb-0">Quantile to quantile plot<br>Box-Cox transformed data</p><img class="img-fluid rounded mb-5" src="assets/img/portfolio/QQPlot_BoxCox.png" alt="Box Cox trasformed data - Target data QQ plot" title="Box Cox trasformed data - Target data QQ plot"/></div>
+									</div>
+									<p class="text-start mb-2">
+										⋙ We prefered encoding the qualitative features with a <b>Binary Encoder</b> over a standard <b>OneHotEncoder</b> to minimize generated data.
+									</P>
+									<p class="text-start mb-4">
+										⋙ We determined that the <b>XGBoostRegressor</b> was giving good results with our data, but improvement was still possible.<br>
+										That's why we merged <i>scraped</i> data into our dataset, adding some quantitative features like user scores and the counts of positive / mixed / negative reviews per game, as well as critic scores, and counts of positive / mixed / negative reviews.<br><br>
+										This enhancement helps increasing predictions precision by about 18%, from 44% to 62%.
+									</p>
+									
+									<div class="mb-4">
+										<h5>Please have a look to our full project Streamlit demo ⬇️</h5>
+										<a class="btn btn-outline-light btn-social mx-1" href="https://datascientestproject-vgchartz.streamlit.app/" style="background:#2c3e50" target= "_blank"><i class="fa-fw fa-solid fa-globe fa-beat"></i></a>
+										<a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Jaysidi/DataScientestProject" style="background:#2c3e50" target= "_blank"><i class="fab fa-fw fa-github fa-beat fa-lg"></i></a>
+									</div>
+
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
